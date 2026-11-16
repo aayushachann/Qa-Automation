@@ -4,7 +4,7 @@
 
 This project automates the complete signup process of the Authorized Partner website using Playwright.
 
-Website: https://authorized-partner.vercel.app/
+**Website:** https://authorized-partner.vercel.app/
 
 The automation completes the registration process without manual intervention.
 
@@ -25,7 +25,7 @@ The automation completes the registration process without manual intervention.
 ## Technologies and Environment
 
 | Technology | Version / Purpose |
-|---|---|
+
 | JavaScript | Programming language |
 | Node.js | v24.20.0 |
 | npm | 11.19.0 |
@@ -42,6 +42,7 @@ Qa-Automation/
 │   ├── signup.spec.js
 │   └── temp-mail.js
 ├── Company registration.pdf
+├── TEST REPORT.pdf
 ├── playwright.config.js
 ├── package.json
 ├── package-lock.json
@@ -53,7 +54,7 @@ Qa-Automation/
 ## Prerequisites
 
 - Node.js and npm installed.
-- A Mailsac account and API key.
+- A free Mailsac account.
 - Visual Studio Code (recommended).
 
 ## Installation and Setup
@@ -86,22 +87,26 @@ npx playwright install chromium
 
 This project uses the Mailsac API to retrieve OTP verification emails automatically.
 
-The API key is stored in an environment variable and is not included in the GitHub repository.
+To configure the API key:
 
-The required API key will be shared separately with the evaluator through a secure channel.
-
-1. Create a `.env` file in the project root directory.
-2. Add the following:
+1. Create a free account at [Mailsac](https://mailsac.com/).
+2. Log in to your Mailsac account.
+3. Open the **API Keys & Users** section.
+4. Under **API Keys**, find **Integrate with API Services**.
+5. Click **Manage Keys**.
+6. Create a new API key and copy it.
+7. Create a `.env` file in the project root directory.
+8. Add the following:
 
 ```env
-MAILSAC_API_KEY=your_provided_api_key
+MAILSAC_API_KEY=your_mailsac_api_key
 ```
 
-Replace the placeholder with the API key provided separately.
+Replace the placeholder with your own Mailsac API key.
 
 The API key is required for automatic OTP retrieval during test execution.
 
-**Note:** Do not upload your actual `.env` file or API key to GitHub. The `.env` file is excluded using `.gitignore`.
+**Note:** Do not upload your actual `.env` file or API key to GitHub. The `.env` file is excluded using `.gitignore`. The `.env.example` file is provided as a reference.
 
 ## Running the Automation
 
@@ -125,7 +130,7 @@ The automation uses sample registration details for testing.
 - Sample professional experience and verification details.
 - Company registration PDF used for document upload.
 
-**Important:** The script currently contains predefined sample email and phone number values. For each new registration attempt, replace them in signup.spec.js with a new, unused Mailsac email address (e.g., hello2026@mailsac.com) and phone number (e.g., 9855508061). Previously registered details may not be accepted.
+**Important:** The script currently contains predefined sample email and phone number values. For each new registration attempt, replace them in `tests/signup.spec.js` with a new, unused Mailsac email address (e.g., `hello2026@mailsac.com`) and phone number (e.g., `9855508061`). Mailsac email addresses must end with `@mailsac.com` to receive OTP verification emails. Previously registered details may not be accepted.
 
 ## Test Validation and Expected Result
 
