@@ -125,7 +125,7 @@ The automation uses sample registration details for testing.
 - Sample professional experience and verification details.
 - Company registration PDF used for document upload.
 
-**Important:** The script currently contains predefined sample email and phone number values. For each new registration attempt, replace them in `signup.spec.js` with a new, unused Mailsac email address and phone number. Previously registered details may not be accepted.
+**Important:** The script currently contains predefined sample email and phone number values. For each new registration attempt, replace them in signup.spec.js with a new, unused Mailsac email address (e.g., hello2026@mailsac.com) and phone number (e.g., 9855508061). Previously registered details may not be accepted.
 
 ## Test Validation and Expected Result
 
