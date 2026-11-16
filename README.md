@@ -46,14 +46,14 @@ Qa-Automation/
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
+├── .env.example
 └── README.md
 ```
 
 ## Prerequisites
 
 - Node.js and npm installed.
-- A Mailsac account.
-- A Mailsac API key.
+- A Mailsac account and API key.
 - Visual Studio Code (recommended).
 
 ## Installation and Setup
@@ -86,20 +86,22 @@ npx playwright install chromium
 
 This project uses the Mailsac API to retrieve OTP verification emails automatically.
 
-1. Create a Mailsac account at https://mailsac.com/.
-2. Generate your own Mailsac API key.
-3. Create a `.env` file in the project root directory.
-4. Add the following:
+The API key is stored in an environment variable and is not included in the GitHub repository.
+
+The required API key will be shared separately with the evaluator through a secure channel.
+
+1. Create a `.env` file in the project root directory.
+2. Add the following:
 
 ```env
-MAILSAC_API_KEY=your_mailsac_api_key
+MAILSAC_API_KEY=your_provided_api_key
 ```
 
-Replace the placeholder with your own API key.
+Replace the placeholder with the API key provided separately.
 
-The API key allows the automation script to access Mailsac and retrieve OTP emails.
+The API key is required for automatic OTP retrieval during test execution.
 
-**Note:** Do not upload your actual `.env` file or API key to GitHub.
+**Note:** Do not upload your actual `.env` file or API key to GitHub. The `.env` file is excluded using `.gitignore`.
 
 ## Running the Automation
 
@@ -119,7 +121,7 @@ The automation uses sample registration details for testing.
 
 - Sample names and agency information.
 - Email addresses created using Mailsac for OTP verification.
-- Sample phone numbers sourced from [FakeNumber.in – Nepal](https://fakenumber.in/nepal).
+- Sample phone numbers sourced from FakeNumber.in – Nepal: https://fakenumber.in/nepal
 - Sample professional experience and verification details.
 - Company registration PDF used for document upload.
 
@@ -148,20 +150,3 @@ Registration completed successfully
 QA Automation Project
 
 **Project:** Automated Signup Testing using Playwright
-## Environment Configuration
-
-This project uses the Mailsac API to retrieve OTP verification emails automatically.
-
-The API key is stored in an environment variable and is not included in the GitHub repository.
-
-The required API key will be shared separately with the evaluator through a secure channel.
-
-Create a `.env` file in the project root directory and add:
-
-```env
-MAILSAC_API_KEY=your_provided_api_key
-```
-
-Replace the placeholder with the API key provided separately.
-
-The API key is required for automatic OTP retrieval during test execution.
