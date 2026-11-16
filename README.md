@@ -121,11 +121,11 @@ The automation uses sample registration details for testing.
 
 - Sample names and agency information.
 - Email addresses created using Mailsac for OTP verification.
-- Sample phone numbers sourced from FakeNumber.in – Nepal: https://fakenumber.in/nepal
+- Sample phone numbers sourced from [FakeNumber.in – Nepal](https://fakenumber.in/nepal).
 - Sample professional experience and verification details.
 - Company registration PDF used for document upload.
 
-Unique email addresses and phone numbers are required for new registration attempts.
+**Important:** The script currently contains predefined sample email and phone number values. For each new registration attempt, replace them in `signup.spec.js` with a new, unused Mailsac email address and phone number. Previously registered details may not be accepted.
 
 ## Test Validation and Expected Result
 
