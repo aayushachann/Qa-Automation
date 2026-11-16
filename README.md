@@ -61,7 +61,7 @@ Qa-Automation/
 Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_LINK
+git clone https://github.com/aayushachann/Qa-Automation
 ```
 
 Navigate to the project directory:
