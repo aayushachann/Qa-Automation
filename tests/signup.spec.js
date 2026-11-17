@@ -125,6 +125,5 @@ test('complete full signup', async ({ page }) => {
 
     await expect(page).toHaveURL(/\/admin\/profile/, { timeout: 30000 });
     console.log('Registration completed successfully');
-    await page.pause();
 });
 
